@@ -3,19 +3,19 @@ using UnityEngine.AI;
 
 public class PussyScript : MonoBehaviour
 {
-    private float startWaitTime = 3;
-    private float laserTime = 10;
-    public float waitTime;
-    private int rays = 90;
-    private int distance = 90;
-    private float angle = 360;
     public Transform[] moveSpots;
-
+    public float waitTime;
+    
     private NavMeshAgent agent;
     private int randomSpot;
     private Vector3 point;
     private Transform laserPoint;
 
+    private float startWaitTime = 3;
+    private float laserTime = 10;
+    private int rays = 90;
+    private int distance = 10;
+    private float angle = 360;
     public static int status = 0;
     //private int colorHeart = 0;
     
@@ -81,7 +81,7 @@ public class PussyScript : MonoBehaviour
         Vector3 pos = transform.position;
         hit = Physics2D.Raycast(pos, dir, distance);
         Vector3 hitt = hit.point;
-        
+
         if (hit.collider != null)
         {
             if (hit.transform == laserPoint)
@@ -138,7 +138,6 @@ public class PussyScript : MonoBehaviour
     void Update()
     {
         RoamInRoom();
-        RayToScan();
         switch (status)
         {
             case 0: Patrolling();

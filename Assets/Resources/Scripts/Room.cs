@@ -14,8 +14,7 @@ public class Room : MonoBehaviour
             //PussyScript.status = 2;
         }
     }
-
-    private void Update()
+    private void Start()
     {
         box = GetComponent<Collider2D>();
     }
