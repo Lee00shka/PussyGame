@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30376923}
   - component: {fileID: 30376924}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: "GamesPlusJames_RPG-Character \u2014 \u043A\u043E\u043F\u0438\u044F_0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 134110911}
   - component: {fileID: 134110912}
   - component: {fileID: 134110913}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pussy1
   m_TagString: Pussy
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 593971065}
   - component: {fileID: 593971066}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GridMIrror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1182,7 +1182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 960447130}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Enviroment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1471,7 +1471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1503552655}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}

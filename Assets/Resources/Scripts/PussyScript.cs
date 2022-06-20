@@ -14,7 +14,7 @@ public class PussyScript : MonoBehaviour
     private float startWaitTime = 3;
     private float laserTime = 10;
     private int rays = 90;
-    private int distance = 10;
+    private int distance = 20;
     private float angle = 360;
     public static int status = 0;
     //private int colorHeart = 0;
@@ -138,6 +138,7 @@ public class PussyScript : MonoBehaviour
     void Update()
     {
         RoamInRoom();
+        RayToScan();
         switch (status)
         {
             case 0: Patrolling();
