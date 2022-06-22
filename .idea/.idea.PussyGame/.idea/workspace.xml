@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07cd5668-166a-4b3b-aa35-4d0c932153b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/PussyScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/PussyScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PussyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PussyGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +81,8 @@
       <workItem from="1654931751886" duration="14091000" />
       <workItem from="1655366816141" duration="19983000" />
       <workItem from="1655491276099" duration="1702000" />
+      <workItem from="1655741544043" duration="947000" />
+      <workItem from="1655880114838" duration="1882000" />
     </task>
     <servers />
   </component>
