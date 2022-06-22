@@ -45,8 +45,8 @@ public class Attack : MonoBehaviour
                     minPussy = pussy.Value;
                 }
             }
+            Global.ChangeStatus(3);
             minPussy.gameObject.GetComponent<PussyScript>().Mark();
-            PussyScript.status = 3;
             Debug.Log("Have fun, " + minPussy.gameObject.name);
         }
     }

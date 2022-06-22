@@ -30,7 +30,7 @@ public class Laser : MonoBehaviour
         if (flag && Input.GetButtonDown("Fire1"))
         {
             Debug.Log("The laser is activated");
-            PussyScript.status = 1;
+            Global.ChangeStatus(1);
         }
     }
 }

@@ -21,8 +21,8 @@ public class PussyScript : MonoBehaviour
     private int distance = 20;
     private float angle = 360;
     
-    public static int status = 0;
-    public bool blackLabel = false;
+    private int status = 0;
+    private bool blackLabel = false;
     //private bool glow = bool;
     
     /* Color Heart:
@@ -39,7 +39,10 @@ public class PussyScript : MonoBehaviour
     public void Mark ()
     {
         blackLabel = true;
-        status = 3;
+    }
+    public void ChangeStatus(int val)
+    {
+        status = val;
     }
     private void Patrolling()
     {
@@ -148,7 +151,6 @@ public class PussyScript : MonoBehaviour
     }
     private void Attacked()
     {
-        Debug.Log(gameObject.name + "aaaaaaaaaaaaaaa");
         if (blackLabel)
         {
             switch (colorHeart)
