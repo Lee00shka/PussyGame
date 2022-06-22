@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
 	//Player
 	float walkSpeed = 4f;
-	float speedLimiter 0.7f;
+	float speedLimiter = 0.7f;
 	float inputHorizontal;
 	float inputVertical;
     //private Vector2 moveInput;
@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 	//Animations and states
 	Animator animator;
 	string currentState;
+	const string PLAYER_STAND = "Player_Idle";
 	const string PLAYER_WALK_LEFT = "Player_Walk_Left";
 	const string PLAYER_WALK_RIGHT = "Player_Walk_Right";
 	const string PLAYER_WALK_UP = "Player_Walk_Up";
@@ -60,10 +61,31 @@ public class PlayerController : MonoBehaviour
 				inputVertical *= speedLimiter;
 			}
 			rb.velocity = new Vector2(inputHorizontal * walkSpeed, inputVertical * walkSpeed);
+
+			if (inputHorizontal > 0)
+			{
+				ChangeAnimationState(PLAYER_WALK_RIGHT);
+			}
+
+			else if (inputHorizontal < 0)
+			{
+				ChangeAnimationState(PLAYER_WALK_LEFT);
+			}
+
+			else if (inputVertical > 0)
+			{
+				ChangeAnimationState(PLAYER_WALK_UP);
+			}
+
+			else if (inputVertical < 0)
+			{
+				ChangeAnimationState(PLAYER_WALK_DOWN);
+			}
 		}
 		else
 		{
 			rb.velocity = new Vector2(0f, 0f);
+			ChangeAnimationState(PLAYER_STAND);
 		}
         //rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }
