@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7418b65e2f28d654eb13e1b8e9dd392f
+guid: 752d982b3de304046b25367d9c04af3f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,10 +44,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: asd_0
+      name: mainCatWalkingbigga1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 16
-        height: 16
+        y: 148
+        width: 92
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5310002a14038245b7ee74618c99909
-      internalID: -51079228
+      spriteID: 96d10e2f53a7d2b4ebcf44f4c0b2b9a8
+      internalID: 294737738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asd_1
+      name: mainCatWalkingbigga1_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        x: 96
+        y: 148
+        width: 92
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 334d93930b4e89444b40da348016f440
-      internalID: 1548357259
+      spriteID: b7949162bb5554b418125156a976f87d
+      internalID: 878874155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asd_2
+      name: mainCatWalkingbigga1_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
+        x: 192
+        y: 148
+        width: 92
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 363f17c7f7ee02e42b5e55991a356513
-      internalID: -1129276541
+      spriteID: d07e07fd33b61e84ba1098881fee1d8c
+      internalID: -1182190124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asd_3
+      name: mainCatWalkingbigga1_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
+        x: 288
+        y: 148
+        width: 92
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc8075bb72e9751418b4a441c8d469f3
-      internalID: 335991466
+      spriteID: 69939dadade397845bb4f4c40eac840a
+      internalID: -1810206547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asd_4
+      name: mainCatWalkingbigga1_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
+        x: 384
+        y: 148
+        width: 92
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba6f6b13286f0c649ba2e9264cec5e64
-      internalID: 1785804276
+      spriteID: 19f73140af1e3cc4d9e06e0b5cbb7928
+      internalID: 1806841707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asd_5
+      name: mainCatWalkingbigga1_5
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
+        x: 0
+        y: 4
+        width: 92
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +235,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42b2ec578770ef2468833174a5340c23
-      internalID: -2095505496
+      spriteID: ae8ffc032a5daba4ead7173c8da25a2a
+      internalID: 720446158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainCatWalkingbigga1_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 4
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea38a9e4b8b9ed24380ac6908e2e8717
+      internalID: -441436774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainCatWalkingbigga1_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 4
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794afbe09bb0c5647a900b2dbb633639
+      internalID: -1337083566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainCatWalkingbigga1_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 4
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08e6d8438be9ff43a5354a68cefff13
+      internalID: 1122287010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainCatWalkingbigga1_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 4
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6878251af19968d4cb7b7754a2bac6ff
+      internalID: 121101959
       vertices: []
       indices: 
       edges: []
@@ -252,12 +336,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      asd_1: 1548357259
-      asd_5: -2095505496
-      asd_2: -1129276541
-      asd_4: 1785804276
-      asd_3: 335991466
-      asd_0: -51079228
+      mainCatWalkingbigga1_3: -1810206547
+      mainCatWalkingbigga1_9: 121101959
+      mainCatWalkingbigga1_5: 720446158
+      mainCatWalkingbigga1_6: -441436774
+      mainCatWalkingbigga1_8: 1122287010
+      mainCatWalkingbigga1_0: 294737738
+      mainCatWalkingbigga1_1: 878874155
+      mainCatWalkingbigga1_7: -1337083566
+      mainCatWalkingbigga1_2: -1182190124
+      mainCatWalkingbigga1_4: 1806841707
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

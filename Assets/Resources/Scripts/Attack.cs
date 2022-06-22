@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class Attack : MonoBehaviour
+{
+    public Dictionary<string, Collider2D> inTrigger;
+    public int flag = 0;
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Pussy")
+        {
+            inTrigger.Add(other.name, other);
+            flag += 1;
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Pussy")
+        {
+            inTrigger.Remove(other.name);
+            flag -= 1;
+        }
+    }
+    private void Start()
+    {
+        inTrigger = new Dictionary<string, Collider2D>();
+    }
+    private void Update()
+    {
+        if (flag > 0 && Input.GetButtonDown("Fire2"))
+        {
+            Collider2D minPussy = null;
+            float min = 1000000;
+            float count;
+            foreach (var pussy in inTrigger)
+            {
+                count = Vector2.Distance(pussy.Value.transform.position, transform.position );
+                if (count < min)
+                {
+                    min = count;
+                    minPussy = pussy.Value;
+                }
+            }
+            minPussy.gameObject.GetComponent<PussyScript>().Mark();
+            PussyScript.status = 3;
+            Debug.Log("Have fun, " + minPussy.gameObject.name);
+        }
+    }
+}

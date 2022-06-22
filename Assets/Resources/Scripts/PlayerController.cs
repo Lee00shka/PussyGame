@@ -38,12 +38,12 @@ public class PlayerController : MonoBehaviour
         glasses = true;
         Debug.Log("Я недел очки");
     }
-    void Start()
+    private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
 		animator = gameObject.GetComponent<Animator>();
     }
-    void Update()
+    private void Update()
     {
 		inputHorizontal = Input.GetAxisRaw("Horizontal");
 		inputVertical = Input.GetAxisRaw("Vertical");
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         //moveVelocity = moveInput.normalized * speed;
 
     }
-    void FixedUpdate() 
+    private void FixedUpdate() 
     {
 		if (inputHorizontal != 0 || inputVertical != 0)
 		{
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
     }
 
 	//Animaton state changer
-	void ChangeAnimationState(string newState)
+	private void ChangeAnimationState(string newState)
 	{
 		//Stop animation from interrupting itself
 		if (currentState == newState) return;

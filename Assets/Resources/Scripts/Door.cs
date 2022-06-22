@@ -4,23 +4,36 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    private void OnTriggerStay2D(Collider2D other)
+    private bool flag = false;
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetButton("Fire1"))
+            flag = true;
+            //Написать код для добавления подказки
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            flag = false;
+            //Написать код для удаления подсказки
+        }
+    }
+    private void Update()
+    {
+        if (flag && PlayerController.key && Input.GetButtonDown("Fire1"))
+        {
+            if (Room.door)
             {
-                if (PlayerController.key)
-                {
-                    if (Room.door)
-                    {
-                        Room.door = false;
-                    }
-                    else
-                    {
-                        Room.door = true;
-                    }
-                }
+                Debug.Log("The door is closed");
+                Room.door = false;
+            }
+            else
+            {
+                Debug.Log("The door is open");
+                Room.door = true;
             }
         }
     }

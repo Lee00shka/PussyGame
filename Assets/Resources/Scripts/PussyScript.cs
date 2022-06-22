@@ -5,25 +5,43 @@ public class PussyScript : MonoBehaviour
 {
     public Transform[] moveSpots;
     public float waitTime;
+    public int asd;
+    public int dsa;
+    
     
     private NavMeshAgent agent;
     private int randomSpot;
     private Vector3 point;
     private Transform laserPoint;
-
+    private int colorHeart = 0;
+    
     private float startWaitTime = 3;
     private float laserTime = 10;
     private int rays = 90;
     private int distance = 20;
     private float angle = 360;
-    public static int status = 0;
-    //private int colorHeart = 0;
     
-    /* 0 - Патруль
+    public static int status = 0;
+    public bool blackLabel = false;
+    //private bool glow = bool;
+    
+    /* Color Heart:
+     * 0 - Нейтральный
+     * 1 - Очарованный
+     * 2 - Холодный*/
+    
+    /* Status
+     * 0 - Патруль
      * 1 - Лазер
-     * 2 - Заперт в комнате */
-     
-    void Patrolling()
+     * 2 - Заперт в комнате
+     * 3 - Очарован*/
+
+    public void Mark ()
+    {
+        blackLabel = true;
+        status = 3;
+    }
+    private void Patrolling()
     {
         point = moveSpots[randomSpot].position;
         agent.SetDestination(point);
@@ -41,9 +59,9 @@ public class PussyScript : MonoBehaviour
             }
         }
     }
-    void Laser()
+    private void Laser()
     {
-        if (RayToScan())
+        if (RayToScan(laserPoint))
         {
             agent.SetDestination(laserPoint.position);
             if ((laserPoint.position - agent.transform.position).magnitude < 0.3f)
@@ -54,6 +72,7 @@ public class PussyScript : MonoBehaviour
                 }
                 else
                 {
+                    //Добавить анимацию игры с лазером
                     waitTime -= Time.deltaTime;
                 }
             }
@@ -67,14 +86,15 @@ public class PussyScript : MonoBehaviour
             status = 0;
         }
     } 
-    void RoamInRoom()
+    private void RoamInRoom()
     {
         if (Room.box.bounds.Contains(transform.position))
         {
-            print("Я в комнате");
+            //Не дописанная механика
+            print("I'm in the room");
         }
     }
-    bool GetRaycast(Vector3 dir)
+    private bool GetRaycast(Vector3 dir, Transform target)
     {
         bool result = false;
         RaycastHit2D hit = new RaycastHit2D();
@@ -84,7 +104,7 @@ public class PussyScript : MonoBehaviour
 
         if (hit.collider != null)
         {
-            if (hit.transform == laserPoint)
+            if (hit.transform == target)
             {
                 result = true;
                 Debug.DrawLine(pos, hitt, Color.green);
@@ -101,7 +121,7 @@ public class PussyScript : MonoBehaviour
 
         return result;
     }
-    bool RayToScan()
+    private bool RayToScan(Transform target)
     {
         bool result = false;
         bool a = false;
@@ -115,18 +135,51 @@ public class PussyScript : MonoBehaviour
             j += angle * Mathf.Deg2Rad / rays;
 
             Vector3 dir = transform.TransformDirection(new Vector3(x, y, 0));
-            if (GetRaycast(dir)) a = true;
+            if (GetRaycast(dir, target)) a = true;
 
             if (x != 0)
             {
                 dir = transform.TransformDirection(new Vector3(-x, y, 0));
-                if (GetRaycast(dir)) b = true;
+                if (GetRaycast(dir, target)) b = true;
             }
         }
         if (a || b) result = true;
         return result;
     }
-    void Start()
+    private void Attacked()
+    {
+        Debug.Log(gameObject.name + "aaaaaaaaaaaaaaa");
+        if (blackLabel)
+        {
+            switch (colorHeart)
+            {
+                case (0):
+                    Debug.Log(gameObject.name + ": My heart bursts!");
+                    colorHeart = 1;
+                    break;
+                case (1):
+                    Debug.Log(gameObject.name + ": We've already met");
+                    break;
+                case (2):
+                    Debug.Log(gameObject.name + ": My heart bursts!");
+                    colorHeart = 1;
+                    break;
+            }
+        }
+        else
+        {
+            Transform player = GameObject.FindGameObjectsWithTag("Player")[0].transform;
+            if (RayToScan(player))
+            {
+                Debug.Log(gameObject.name + ": Ugh, he's a total player");
+                colorHeart = 2;
+            }
+        }
+
+        blackLabel = false;
+        status = 0;
+    }
+    private void Start()
     {
         laserPoint = GameObject.FindGameObjectsWithTag("Laser")[0].transform;
         waitTime = startWaitTime;
@@ -135,10 +188,12 @@ public class PussyScript : MonoBehaviour
         agent.updateUpAxis = false;
         randomSpot = Random.Range(0, moveSpots.Length);
     }
-    void Update()
+    private void Update()
     {
-        RoamInRoom();
-        RayToScan();
+
+        if (status == 3) asd = 1;
+        dsa = colorHeart;
+        
         switch (status)
         {
             case 0: Patrolling();
@@ -146,6 +201,8 @@ public class PussyScript : MonoBehaviour
             case 1: Laser();
                 break;
             case 2: RoamInRoom();
+                break;
+            case 3: Attacked();
                 break;
         }
     }

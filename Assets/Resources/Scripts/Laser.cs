@@ -5,15 +5,32 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    private void OnTriggerStay2D(Collider2D other)
+    private bool flag = false;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetButton("Fire1"))
-            {
-                Debug.Log("Laser");
-                PussyScript.status = 1;
-            }
+            flag = true;
+            //Написать код для добавления подказки
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            flag = false;
+            //Написать код для удаления подсказки
+        }
+    }
+
+    private void Update()
+    {
+        if (flag && Input.GetButtonDown("Fire1"))
+        {
+            Debug.Log("The laser is activated");
+            PussyScript.status = 1;
         }
     }
 }
