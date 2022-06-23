@@ -23,11 +23,10 @@ public class PlayerController : MonoBehaviour
 	//Animations and states
 	Animator animator;
 	string currentState;
-	const string PLAYER_STAND = "Player_Idle";
+	const string PLAYER_STAND_LEFT = "Player_Idle_Left";
+	const string PLAYER_STAND_RIGHT = "Player_Idle_Right";
 	const string PLAYER_WALK_LEFT = "Player_Walk_Left";
 	const string PLAYER_WALK_RIGHT = "Player_Walk_Right";
-	const string PLAYER_WALK_UP = "Player_Walk_Up";
-	const string PLAYER_WALK_DOWN = "Player_Walk_Down";
 
     void Attack()
     {
@@ -47,8 +46,6 @@ public class PlayerController : MonoBehaviour
     {
 		inputHorizontal = Input.GetAxisRaw("Horizontal");
 		inputVertical = Input.GetAxisRaw("Vertical");
-        //moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        //moveVelocity = moveInput.normalized * speed;
 
     }
     private void FixedUpdate() 
@@ -71,21 +68,11 @@ public class PlayerController : MonoBehaviour
 			{
 				ChangeAnimationState(PLAYER_WALK_LEFT);
 			}
-
-			else if (inputVertical > 0)
-			{
-				ChangeAnimationState(PLAYER_WALK_UP);
-			}
-
-			else if (inputVertical < 0)
-			{
-				ChangeAnimationState(PLAYER_WALK_DOWN);
-			}
 		}
 		else
 		{
 			rb.velocity = new Vector2(0f, 0f);
-			ChangeAnimationState(PLAYER_STAND);
+			ChangeAnimationState(PLAYER_STAND_LEFT);
 		}
         //rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }

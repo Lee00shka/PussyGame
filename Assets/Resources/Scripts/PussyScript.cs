@@ -230,22 +230,12 @@ public class PussyScript : MonoBehaviour
     }
     private void AnimationRun()
     {
-        if (agent.velocity.x == 0 && agent.velocity.y == 0)
+        if (agent.velocity.x == 0)
         {
-            
             ChangeAnimationState(NPC_STAND);
-        }
-        else if (agent.velocity.y > .5f)
-        {
-            ChangeAnimationState(NPC_WALK_UP);
-        }
-        else if (agent.velocity.y < -.5f)
-        {
-            ChangeAnimationState(NPC_WALK_DOWN);
         }
         else if (agent.velocity.x > .5f)
         {
-            Debug.Log("Change");
             ChangeAnimationState(NPC_WALK_RIGHT);
         }
         else if (agent.velocity.x < -.5f)
