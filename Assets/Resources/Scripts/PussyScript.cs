@@ -234,6 +234,7 @@ public class PussyScript : MonoBehaviour
         //For Animations
         if (agent.velocity.x == 0 && agent.velocity.y == 0)
         {
+            
             ChangeAnimationState(NPC_STAND);
         }
         else if (agent.velocity.y > .5f)
@@ -246,6 +247,7 @@ public class PussyScript : MonoBehaviour
         }
         else if (agent.velocity.x > .5f)
         {
+            Debug.Log("Change");
             ChangeAnimationState(NPC_WALK_RIGHT);
         }
         else if (agent.velocity.x < -.5f)
@@ -253,14 +255,11 @@ public class PussyScript : MonoBehaviour
             ChangeAnimationState(NPC_WALK_LEFT);
         }
     }
-    
-    
-    
+
     //Animaton heart changer
     private void ChangeAnimationHeart(string newHeart)
     {
         //Stop animation from interrupting itself
-        Debug.Log("Change");
         if (currentHeart == newHeart) return;
 		
         //Play new animation
@@ -276,7 +275,7 @@ public class PussyScript : MonoBehaviour
         if (currentState == newState) return;
 		
         //Play new animation
-        animator.Play(newState);
+        NPCanimator.Play(newState);
 
         //Update currentState
         currentState = newState;		
