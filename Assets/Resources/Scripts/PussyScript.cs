@@ -231,7 +231,7 @@ public class PussyScript : MonoBehaviour
     }
     private void AnimationRun()
     {
-        if (agent.velocity.x == 0)
+        if (agent.velocity.x == 0 && agent.velocity.y == 0)
         {
             if (direction == 1)
             { 
@@ -253,6 +253,18 @@ public class PussyScript : MonoBehaviour
         {
             ChangeAnimationState(NPC_WALK_LEFT);
             direction = 0;
+        }
+        else if (agent.velocity.y != 0)
+        {
+            if (direction == 1)
+            {
+                ChangeAnimationState(NPC_WALK_RIGHT); 
+            }
+
+            else
+            {
+                ChangeAnimationState(NPC_WALK_LEFT);
+            }
         }
     }
     private void Start()

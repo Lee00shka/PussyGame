@@ -50,6 +50,19 @@ public class PlayerController : MonoBehaviour
 		inputVertical = Input.GetAxisRaw("Vertical");
 
     }
+
+    private void HeadDirection(int route)
+    {
+	    if (route == 1)
+	    {
+		    ChangeAnimationState(PLAYER_STAND_RIGHT);
+	    }
+
+	    else
+	    {
+		    ChangeAnimationState(PLAYER_STAND_LEFT);
+	    } 
+    }
     private void FixedUpdate() 
     {
 		if (inputHorizontal != 0 || inputVertical != 0)
@@ -72,22 +85,24 @@ public class PlayerController : MonoBehaviour
 				ChangeAnimationState(PLAYER_WALK_LEFT);
 				direction = 0;
 			}
+			
+			else if (inputVertical != 0)
+			{
+				if (direction == 1)
+				{
+					ChangeAnimationState(PLAYER_WALK_RIGHT);
+				}
+				else
+				{
+					ChangeAnimationState(PLAYER_WALK_LEFT);
+				}
+			}
 		}
 		else
 		{
 			rb.velocity = new Vector2(0f, 0f);
-			if (direction == 1)
-			{
-				ChangeAnimationState(PLAYER_STAND_RIGHT);
-			}
-
-			else
-			{
-				ChangeAnimationState(PLAYER_STAND_LEFT);
-			}
-			
+			HeadDirection(direction);
 		}
-        //rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }
 
 	//Animaton state changer
