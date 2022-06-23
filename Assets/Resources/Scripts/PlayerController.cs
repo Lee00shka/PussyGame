@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 	float speedLimiter = 0.7f;
 	float inputHorizontal;
 	float inputVertical;
+	
+	int direction = 1;
     //private Vector2 moveInput;
     //private Vector2 moveVelocity;
     
@@ -62,17 +64,28 @@ public class PlayerController : MonoBehaviour
 			if (inputHorizontal > 0)
 			{
 				ChangeAnimationState(PLAYER_WALK_RIGHT);
+				direction = 1;
 			}
 
 			else if (inputHorizontal < 0)
 			{
 				ChangeAnimationState(PLAYER_WALK_LEFT);
+				direction = 0;
 			}
 		}
 		else
 		{
 			rb.velocity = new Vector2(0f, 0f);
-			ChangeAnimationState(PLAYER_STAND_LEFT);
+			if (direction == 1)
+			{
+				ChangeAnimationState(PLAYER_STAND_RIGHT);
+			}
+
+			else
+			{
+				ChangeAnimationState(PLAYER_STAND_LEFT);
+			}
+			
 		}
         //rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }

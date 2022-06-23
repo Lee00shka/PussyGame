@@ -20,6 +20,8 @@ public class PussyScript : MonoBehaviour
     
     private int status = 0;
     private bool blackLabel = false;
+
+    private int direction = 1;
     //private bool glow = bool;
     
     /* Color Heart:
@@ -45,11 +47,10 @@ public class PussyScript : MonoBehaviour
     const string HEART_BLACK = "Black_Heart";
     
     //Animation for NPC
-    const string NPC_STAND = "NPC_Idle";
+    const string NPC_STAND_LEFT = "NPC_Idle_Left";
+    const string NPC_STAND_RIGHT = "NPC_Idle_Right";
     const string NPC_WALK_LEFT = "NPC_Walk_Left";
     const string NPC_WALK_RIGHT = "NPC_Walk_Right";
-    const string NPC_WALK_UP = "NPC_Walk_Up";
-    const string NPC_WALK_DOWN = "NPC_Walk_Down";
 
     public void Mark ()
     {
@@ -232,15 +233,26 @@ public class PussyScript : MonoBehaviour
     {
         if (agent.velocity.x == 0)
         {
-            ChangeAnimationState(NPC_STAND);
+            if (direction == 1)
+            { 
+                ChangeAnimationState(NPC_STAND_RIGHT); 
+            }
+            
+            else
+            { 
+                ChangeAnimationState(NPC_STAND_LEFT); 
+            }
+            
         }
         else if (agent.velocity.x > .5f)
         {
             ChangeAnimationState(NPC_WALK_RIGHT);
+            direction = 1;
         }
         else if (agent.velocity.x < -.5f)
         {
             ChangeAnimationState(NPC_WALK_LEFT);
+            direction = 0;
         }
     }
     private void Start()
