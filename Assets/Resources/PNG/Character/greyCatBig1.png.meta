@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 70ce600e5ba91a74fb349da9d08a9fff
+guid: 71cbdd10f0ebc6a4690ee3e8d83c2b74
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: greyCatSmall1_0
+      name: greyCatBig1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 37
-        width: 23
-        height: 34
+        y: 148
+        width: 92
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,83 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6311eb673dcfd8d4fa5c8729f39cc24c
-      internalID: -1921808303
+      spriteID: 328615632a3e18e4a88ffd96957a593a
+      internalID: -247104906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: greyCatSmall1_1
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 37
-        width: 23
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b646c310f6fc9de47a5848a7c9e9e02f
-      internalID: 363108327
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: greyCatSmall1_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 37
-        width: 23
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 616f8d95a945ee4419f2fb76bee2e48f
-      internalID: -912301430
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: greyCatSmall1_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 37
-        width: 23
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9befb8d20b144614aa32494eca97384a
-      internalID: 1720172563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: greyCatSmall1_4
+      name: greyCatBig1_1
       rect:
         serializedVersion: 2
         x: 96
-        y: 37
-        width: 23
-        height: 34
+        y: 148
+        width: 92
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +151,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7ecfdb30ce72f340a2aeab94bb660da
-      internalID: 1261036415
+      spriteID: 163164fb014d29b45b385249ee2be55b
+      internalID: 1208130194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: greyCatSmall1_5
+      name: greyCatBig1_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 148
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5798fba79fee17e42855a3cd2a3a6ecc
+      internalID: -1671350080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatBig1_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 148
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce41842c4d9ebd74f99d17e43da530c2
+      internalID: -1010591752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatBig1_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 148
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8629370c9be144189f3ae895d1ae3c
+      internalID: 1375281633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatBig1_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 23
-        height: 34
+        y: 4
+        width: 92
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,83 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffb300c4fe76f4c40ab7fe008763b85d
-      internalID: -392186716
+      spriteID: 4883e71dc63c5a54cbe9ec4523025e17
+      internalID: 1064350790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: greyCatSmall1_6
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 1
-        width: 23
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25d112dd04664c44382c89378cbd0288
-      internalID: 1267924773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: greyCatSmall1_7
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 1
-        width: 23
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c2d28a1e2f36dd4a8b6310bb7a3b469
-      internalID: 968548547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: greyCatSmall1_8
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 1
-        width: 23
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac83f0daee40e964293c801089ddf63f
-      internalID: 1006985934
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: greyCatSmall1_9
+      name: greyCatBig1_6
       rect:
         serializedVersion: 2
         x: 96
-        y: 1
-        width: 23
-        height: 34
+        y: 4
+        width: 92
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,8 +256,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 232812b0b2e05af46a9d369ef72dd3e7
-      internalID: -1082528144
+      spriteID: e09e2295315b6be4c9f5cb8eb408977c
+      internalID: 205515410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatBig1_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 4
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1d67e44f3768644adcc899f08d6765
+      internalID: 1007799484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatBig1_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 4
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ccc4c8b9fb2e6e42b892b82aadee026
+      internalID: 1841285122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatBig1_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 4
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340f2b0aee5524e4396cf45bcbf1ef10
+      internalID: 1094767762
       vertices: []
       indices: 
       edges: []
@@ -336,16 +336,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      greyCatSmall1_0: -1921808303
-      greyCatSmall1_4: 1261036415
-      greyCatSmall1_5: -392186716
-      greyCatSmall1_9: -1082528144
-      greyCatSmall1_3: 1720172563
-      greyCatSmall1_8: 1006985934
-      greyCatSmall1_2: -912301430
-      greyCatSmall1_7: 968548547
-      greyCatSmall1_6: 1267924773
-      greyCatSmall1_1: 363108327
+      greyCatBig1_4: 1375281633
+      greyCatBig1_6: 205515410
+      greyCatBig1_7: 1007799484
+      greyCatBig1_8: 1841285122
+      greyCatBig1_3: -1010591752
+      greyCatBig1_1: 1208130194
+      greyCatBig1_0: -247104906
+      greyCatBig1_9: 1094767762
+      greyCatBig1_2: -1671350080
+      greyCatBig1_5: 1064350790
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
