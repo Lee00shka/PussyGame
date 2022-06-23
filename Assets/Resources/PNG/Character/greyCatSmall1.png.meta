@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dee013e7dbe74b1468516db7e900e146
+guid: 70ce600e5ba91a74fb349da9d08a9fff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,349 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pso_0
+      name: greyCatSmall1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bf7317602e8e7a41980c34ac162294a
-      internalID: -1311757120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_1
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72d34e65c60f6b3499a778dfa60ff3cb
-      internalID: -694959136
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_2
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9b82155f1e3ce149ae4b28e9e709ef2
-      internalID: 2059518633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_3
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b4fe226f5e574946b66e69963f52a12
-      internalID: -1856246333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_4
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24fdbc1ee224718488b83882fbe170e5
-      internalID: -1632120125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_5
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 334a2f5eb2524a84bbf8cfbb85fefb37
-      internalID: -925859693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_6
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50b4d1332263a1d4297eb10e011f3c94
-      internalID: 422974209
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_7
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6b6d3c139fd8a84690945079a35aada
-      internalID: 144756376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04a1fe568c4f74c4399588520fb48b24
-      internalID: 1183876943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_9
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e4a151b95386e442b4bfdd4016e75c4
-      internalID: -769216973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_10
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bccb64d8c75de9a4daf91b0f475acddf
-      internalID: -1856998010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_11
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91fea470f835ab14692ef0ab2afc4f66
-      internalID: -1311293466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_12
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f56086eb92a84d4cb83eee5cc8195ad
-      internalID: 1922254517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_13
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6e80cab7054ab04db275a9c54031e92
-      internalID: 320665652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_14
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49ba7c6927377fc4c93834faa5130956
-      internalID: -2003080160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_15
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93af6af64f097b54c9462cd10200f5dc
-      internalID: 1636385517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pso_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 100
-        width: 50
-        height: 50
+        y: 37
+        width: 23
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -466,8 +130,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c97695c63cc2c3845bd965323fdd7de3
-      internalID: 359304109
+      spriteID: 6311eb673dcfd8d4fa5c8729f39cc24c
+      internalID: -1921808303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatSmall1_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 37
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b646c310f6fc9de47a5848a7c9e9e02f
+      internalID: 363108327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatSmall1_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 37
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616f8d95a945ee4419f2fb76bee2e48f
+      internalID: -912301430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatSmall1_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 37
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9befb8d20b144614aa32494eca97384a
+      internalID: 1720172563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatSmall1_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 37
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ecfdb30ce72f340a2aeab94bb660da
+      internalID: 1261036415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatSmall1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb300c4fe76f4c40ab7fe008763b85d
+      internalID: -392186716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatSmall1_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d112dd04664c44382c89378cbd0288
+      internalID: 1267924773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatSmall1_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2d28a1e2f36dd4a8b6310bb7a3b469
+      internalID: 968548547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatSmall1_8
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac83f0daee40e964293c801089ddf63f
+      internalID: 1006985934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greyCatSmall1_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232812b0b2e05af46a9d369ef72dd3e7
+      internalID: -1082528144
       vertices: []
       indices: 
       edges: []
@@ -483,23 +336,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pso_7: 144756376
-      pso_8: 1183876943
-      pso_9: -769216973
-      pso_11: -1311293466
-      pso_3: -1856246333
-      pso_14: -2003080160
-      pso_15: 1636385517
-      pso_13: 320665652
-      pso_2: 2059518633
-      pso_10: -1856998010
-      pso_1: -694959136
-      pso_0: -1311757120
-      pso_5: -925859693
-      pso_12: 1922254517
-      pso_4: -1632120125
-      pso_16: 359304109
-      pso_6: 422974209
+      greyCatSmall1_0: -1921808303
+      greyCatSmall1_4: 1261036415
+      greyCatSmall1_5: -392186716
+      greyCatSmall1_9: -1082528144
+      greyCatSmall1_3: 1720172563
+      greyCatSmall1_8: 1006985934
+      greyCatSmall1_2: -912301430
+      greyCatSmall1_7: 968548547
+      greyCatSmall1_6: 1267924773
+      greyCatSmall1_1: 363108327
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
