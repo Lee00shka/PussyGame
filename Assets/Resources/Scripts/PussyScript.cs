@@ -10,6 +10,7 @@ public class PussyScript : MonoBehaviour
     
     
     private NavMeshAgent agent;
+    private NavMeshAgent NPCagent;
     private int randomSpot;
     private Vector3 point;
     private Transform laserPoint;
@@ -35,6 +36,24 @@ public class PussyScript : MonoBehaviour
      * 1 - Лазер
      * 2 - Заперт в комнате
      * 3 - Очарован*/
+    
+    Animator animator;
+
+    private Animator NPCanimator;
+    //Animation for hearts
+    string currentState;
+    string currentHeart;
+    const string HEART_NONE = "None";
+    const string HEART_BLUE = "Blue_Heart";
+    const string HEART_RED = "Red_Heart";
+    const string HEART_BLACK = "Black_Heart";
+    
+    //Animation for NPC
+    const string NPC_STAND = "NPC_Idle";
+    const string NPC_WALK_LEFT = "NPC_Walk_Left";
+    const string NPC_WALK_RIGHT = "NPC_Walk_Right";
+    const string NPC_WALK_UP = "NPC_Walk_Up";
+    const string NPC_WALK_DOWN = "NPC_Walk_Down";
 
     public void Mark ()
     {
@@ -158,6 +177,7 @@ public class PussyScript : MonoBehaviour
                 case (0):
                     Debug.Log(gameObject.name + ": My heart bursts!");
                     colorHeart = 1;
+                    ChangeAnimationHeart(HEART_RED);
                     break;
                 case (1):
                     Debug.Log(gameObject.name + ": We've already met");
@@ -175,6 +195,7 @@ public class PussyScript : MonoBehaviour
             {
                 Debug.Log(gameObject.name + ": Ugh, he's a total player");
                 colorHeart = 2;
+                ChangeAnimationHeart(HEART_BLUE);
             }
         }
 
@@ -189,6 +210,8 @@ public class PussyScript : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         randomSpot = Random.Range(0, moveSpots.Length);
+        animator = transform.GetChild(0).GetComponent<Animator>();
+        NPCanimator = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -207,5 +230,55 @@ public class PussyScript : MonoBehaviour
             case 3: Attacked();
                 break;
         }
+        
+        //For Animations
+        if (agent.velocity.x == 0 && agent.velocity.y == 0)
+        {
+            ChangeAnimationState(NPC_STAND);
+        }
+        else if (agent.velocity.y > .5f)
+        {
+            ChangeAnimationState(NPC_WALK_UP);
+        }
+        else if (agent.velocity.y < -.5f)
+        {
+            ChangeAnimationState(NPC_WALK_DOWN);
+        }
+        else if (agent.velocity.x > .5f)
+        {
+            ChangeAnimationState(NPC_WALK_RIGHT);
+        }
+        else if (agent.velocity.x < -.5f)
+        {
+            ChangeAnimationState(NPC_WALK_LEFT);
+        }
+    }
+    
+    
+    
+    //Animaton heart changer
+    private void ChangeAnimationHeart(string newHeart)
+    {
+        //Stop animation from interrupting itself
+        Debug.Log("Change");
+        if (currentHeart == newHeart) return;
+		
+        //Play new animation
+        animator.Play(newHeart);
+
+        //Update currentHeart
+        currentHeart = newHeart;		
+    }
+    
+    private void ChangeAnimationState(string newState)
+    {
+        //Stop animation from interrupting itself
+        if (currentState == newState) return;
+		
+        //Play new animation
+        animator.Play(newState);
+
+        //Update currentState
+        currentState = newState;		
     }
 }
