@@ -5,12 +5,8 @@ public class PussyScript : MonoBehaviour
 {
     public Transform[] moveSpots;
     public float waitTime;
-    public int asd;
-    public int dsa;
-    
     
     private NavMeshAgent agent;
-    private NavMeshAgent NPCagent;
     private int randomSpot;
     private Vector3 point;
     private Transform laserPoint;
@@ -183,7 +179,7 @@ public class PussyScript : MonoBehaviour
                     Debug.Log(gameObject.name + ": We've already met");
                     break;
                 case (2):
-                    Debug.Log(gameObject.name + ": My heart bursts!");
+                    Debug.Log(gameObject.name + ": Okay, but this is the last time");
                     colorHeart = 1;
                     break;
             }
@@ -191,47 +187,49 @@ public class PussyScript : MonoBehaviour
         else
         {
             Transform player = GameObject.FindGameObjectsWithTag("Player")[0].transform;
-            if (RayToScan(player))
+            if (colorHeart != 0 && RayToScan(player))
             {
-                Debug.Log(gameObject.name + ": Ugh, he's a total player");
-                colorHeart = 2;
-                ChangeAnimationHeart(HEART_BLUE);
+                if (colorHeart == 1)
+                {
+                    Debug.Log(gameObject.name + ": Ugh, he's a total player");
+                    colorHeart = 2;
+                    ChangeAnimationHeart(HEART_BLUE);
+                }
+                else
+                {
+                    Debug.Log(gameObject.name + "YOU SHELL NOT LIVE");
+                    Global.EndGame();
+                }
             }
         }
 
         blackLabel = false;
         status = 0;
     }
-    private void Start()
+    private void ChangeAnimationHeart(string newHeart)
     {
-        laserPoint = GameObject.FindGameObjectsWithTag("Laser")[0].transform;
-        waitTime = startWaitTime;
-        agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-        randomSpot = Random.Range(0, moveSpots.Length);
-        animator = transform.GetChild(0).GetComponent<Animator>();
-        NPCanimator = GetComponent<Animator>();
-    }
-    private void Update()
-    {
+        //Stop animation from interrupting itself
+        if (currentHeart == newHeart) return;
+		
+        //Play new animation
+        animator.Play(newHeart);
 
-        if (status == 3) asd = 1;
-        dsa = colorHeart;
-        
-        switch (status)
-        {
-            case 0: Patrolling();
-                break;
-            case 1: Laser();
-                break;
-            case 2: RoamInRoom();
-                break;
-            case 3: Attacked();
-                break;
-        }
-        
-        //For Animations
+        //Update currentHeart
+        currentHeart = newHeart;		
+    }
+    private void ChangeAnimationState(string newState)
+    {
+        //Stop animation from interrupting itself
+        if (currentState == newState) return;
+		
+        //Play new animation
+        NPCanimator.Play(newState);
+
+        //Update currentState
+        currentState = newState;		
+    }
+    private void AnimationRun()
+    {
         if (agent.velocity.x == 0 && agent.velocity.y == 0)
         {
             
@@ -255,29 +253,30 @@ public class PussyScript : MonoBehaviour
             ChangeAnimationState(NPC_WALK_LEFT);
         }
     }
-
-    //Animaton heart changer
-    private void ChangeAnimationHeart(string newHeart)
+    private void Start()
     {
-        //Stop animation from interrupting itself
-        if (currentHeart == newHeart) return;
-		
-        //Play new animation
-        animator.Play(newHeart);
-
-        //Update currentHeart
-        currentHeart = newHeart;		
+        laserPoint = GameObject.FindGameObjectsWithTag("Laser")[0].transform;
+        waitTime = startWaitTime;
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+        randomSpot = Random.Range(0, moveSpots.Length);
+        animator = transform.GetChild(0).GetComponent<Animator>();
+        NPCanimator = GetComponent<Animator>();
     }
-    
-    private void ChangeAnimationState(string newState)
+    private void Update()
     {
-        //Stop animation from interrupting itself
-        if (currentState == newState) return;
-		
-        //Play new animation
-        NPCanimator.Play(newState);
-
-        //Update currentState
-        currentState = newState;		
+        switch (status)
+        {
+            case 0: Patrolling();
+                break;
+            case 1: Laser();
+                break;
+            case 2: RoamInRoom();
+                break;
+            case 3: Attacked();
+                break;
+        }
+        AnimationRun();
     }
 }

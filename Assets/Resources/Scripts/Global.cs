@@ -13,7 +13,7 @@ public class Global : MonoBehaviour
             pussy.GetComponent<PussyScript>().ChangeStatus(val);
         }
     }
-
+    public static void EndGame(){}
     private void Start()
     {
         NPC = GameObject.FindGameObjectsWithTag("Pussy");
