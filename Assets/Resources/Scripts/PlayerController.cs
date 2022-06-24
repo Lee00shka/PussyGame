@@ -14,12 +14,10 @@ public class PlayerController : MonoBehaviour
 	float speedLimiter = 0.7f;
 	float inputHorizontal;
 	float inputVertical;
-	
-	int direction = 1;
-    //private Vector2 moveInput;
-    //private Vector2 moveVelocity;
-    
-    public static bool glasses = false;
+
+	private int direction = 1;
+
+	public static bool glasses = false;
     public static bool key = false;
 
 	//Animations and states

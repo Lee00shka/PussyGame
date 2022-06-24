@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    //Animations
+    Animator animator;
+    string currentState;
+    
+    const string PLAYER_STAND_LEFT = "None";
+    
+    //Code
     public Dictionary<string, Collider2D> inTrigger;
     public int flag = 0;
     
@@ -13,6 +20,7 @@ public class Attack : MonoBehaviour
         if (other.gameObject.tag == "Pussy")
         {
             inTrigger.Add(other.name, other);
+            
             flag += 1;
         }
     }
@@ -27,7 +35,7 @@ public class Attack : MonoBehaviour
     }
     private void Start()
     {
-        inTrigger = new Dictionary<string, Collider2D>();
+        inTrigger = new Dictionary<string, Collider2D>(); 
     }
     private void Update()
     {
