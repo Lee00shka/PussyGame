@@ -59,7 +59,7 @@ public class PussyScript : MonoBehaviour
         if (colorHeart == 1)
         {
             Global.ChangeStatus(0);
-            if (tagGlasses == PlayerController.glasses)
+            if (tagGlasses == PlayerController._glasses)
             {
                 Debug.Log(gameObject.name + ": We've already met");
             }

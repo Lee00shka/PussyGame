@@ -29,7 +29,7 @@ public class CaseWithGlasses : MonoBehaviour
     {
         if (flag && Input.GetButtonDown("Fire1"))
         {
-            if (PlayerController.glasses)
+            if (PlayerController._glasses)
             {
                 Debug.Log("I can't change image too often");
             }
