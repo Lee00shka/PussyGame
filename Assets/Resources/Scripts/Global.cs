@@ -1,16 +1,22 @@
+using System;
 using UnityEngine;
+using TMPro;
 
 public class Global : MonoBehaviour
 {
     private static GameObject[] NPC;
-    //public static int numOfPussies;
-    //public static int numOfEnchanted = 0;
-    
+    private static GameObject player;
+    public static int numOfPussies;
+    public static int numOfEnchanted = 0;
     private static Animator hintAnimator;
     private static string currentHint;
+    public TextMeshProUGUI charmed;
     
     //Global ivents
-    public static void EndGame(){}
+    public static void EndGame()
+    {
+        
+    }
     
     //Changing every pussy
     public static void ChangeStatus(int val)
@@ -27,6 +33,11 @@ public class Global : MonoBehaviour
             pussy.GetComponent<PussyScript>().PlayerPutOnGlasses();
         }
     }
+    //UI
+    public void RenderText()
+    {
+        charmed.text = "CHARMED: " + numOfEnchanted + "/" + numOfPussies;
+    }
     
     //Animation
     public static void ChangeHintsState(string newHint)
@@ -40,13 +51,30 @@ public class Global : MonoBehaviour
         //Update currentState
         currentHint = newHint;
     }
-    
+    public static void ChangeLayer()
+    {
+        foreach (var pussy in NPC)
+        {
+            int y = (int)Math.Round(pussy.transform.position.y * 10);
+            pussy.GetComponent<SpriteRenderer>().sortingOrder = -y;
+        }
+        int yPlayer = (int)Math.Round(player.transform.position.y * 10);
+        player.GetComponent<SpriteRenderer>().sortingOrder = -yPlayer;
+    }
     //Standart
     private void Start()
     {
         hintAnimator = GameObject.FindGameObjectsWithTag("UI Hints")[0].GetComponent<Animator>();
         NPC = GameObject.FindGameObjectsWithTag("Pussy");
-        ScoreManager.numOfPussies = NPC.Length;
+        player = GameObject.FindGameObjectsWithTag("Player")[0];
+        numOfPussies = NPC.Length;
+        RenderText();
+    }
+
+    private void Update()
+    {
+        RenderText();
+        ChangeLayer();
     }
 }
 

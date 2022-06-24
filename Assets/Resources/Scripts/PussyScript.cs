@@ -137,7 +137,7 @@ public class PussyScript : MonoBehaviour
                     Debug.Log(gameObject.name + ": My heart bursts!");
                     colorHeart = 1;
                     ChangeAnimationHeart(HEART_RED);
-                    ScoreManager.numOfEnchanted += 1;
+                    Global.numOfEnchanted += 1;
                     break;
                 case (1):
                     if (tagGlasses == PlayerController.glasses)
@@ -152,7 +152,7 @@ public class PussyScript : MonoBehaviour
                 case (2):
                     Debug.Log(gameObject.name + ": Okay, but this is the last time");
                     colorHeart = 1;
-                    ScoreManager.numOfEnchanted += 1;
+                    Global.numOfEnchanted += 1;
                     break;
             }
         }
@@ -166,7 +166,7 @@ public class PussyScript : MonoBehaviour
                     Debug.Log(gameObject.name + ": Ugh, he's a total player");
                     colorHeart = 2;
                     ChangeAnimationHeart(HEART_BLUE);
-                    ScoreManager.numOfEnchanted -= 1;
+                    Global.numOfEnchanted -= 1;
                 }
                 else
                 {
@@ -175,7 +175,6 @@ public class PussyScript : MonoBehaviour
                 }
             }
         }
-
         blackLabel = false;
         status = 0;
     }
