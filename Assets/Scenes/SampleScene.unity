@@ -5871,7 +5871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d31eb0ea2d90e3408a6d93eefb7aca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMixer: {fileID: 0}
+  mainMixer: {fileID: 24100000, guid: 4e773dd0eaaaa5241ae6719510e2c1b0, type: 2}
 --- !u!1 &762310164
 GameObject:
   m_ObjectHideFlags: 0
@@ -6513,10 +6513,22 @@ MonoBehaviour:
   m_MinValue: -80
   m_MaxValue: 15
   m_WholeNumbers: 0
-  m_Value: -10
+  m_Value: -40
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 708361216}
+        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
+        m_MethodName: SetVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &910735062
 GameObject:
   m_ObjectHideFlags: 0
@@ -10016,10 +10028,10 @@ AudioSource:
   m_GameObject: {fileID: 1412759071}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 4e773dd0eaaaa5241ae6719510e2c1b0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8a9303387bd9c7a48b97383269aa94ae, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.05
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11714,6 +11726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  glasses: 0
 --- !u!60 &1833530476
 PolygonCollider2D:
   m_ObjectHideFlags: 0
