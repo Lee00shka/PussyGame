@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Attack : MonoBehaviour
@@ -9,10 +7,11 @@ public class Attack : MonoBehaviour
     private const string CHARM = "Charm";
     private const string WITHOUT_HINTS = "None";
     
-    //Code
-    public Dictionary<string, Collider2D> inTrigger;
-    public int flag = 0;
+    //Just
+    private Dictionary<string, Collider2D> inTrigger;
+    private int flag = 0;
     
+    //Event Collider
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Pussy")
@@ -22,7 +21,6 @@ public class Attack : MonoBehaviour
             flag += 1;
         }
     }
-    
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Pussy")
@@ -35,11 +33,9 @@ public class Attack : MonoBehaviour
             }
         }
     }
-    private void Start()
-    {
-        inTrigger = new Dictionary<string, Collider2D>(); 
-    }
-    private void Update()
+    
+    //Mechanic
+    private void Charm()
     {
         if (flag > 0 && Input.GetButtonDown("Fire2"))
         {
@@ -59,5 +55,15 @@ public class Attack : MonoBehaviour
             minPussy.gameObject.GetComponent<PussyScript>().Mark();
             Debug.Log("Have fun, " + minPussy.gameObject.name);
         }
+    }
+    
+    //Standart
+    private void Start()
+    {
+        inTrigger = new Dictionary<string, Collider2D>(); 
+    }
+    private void Update()
+    {
+        Charm();
     }
 }

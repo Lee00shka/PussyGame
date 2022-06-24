@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,18 +7,19 @@ public class PlayerController : MonoBehaviour
 	//Components
     private Rigidbody2D rb;
 
-	//Player
+	//Walk
 	float walkSpeed = 4f;
 	float speedLimiter = 0.7f;
 	float inputHorizontal;
 	float inputVertical;
 
-	private int direction = 1;
-
+	
+	//Game property
 	public static bool glasses = false;
     public static bool key = false;
 
 	//Animations and states
+	private int direction = 1;
 	Animator animator;
 	string currentState;
 	const string PLAYER_STAND_LEFT = "Player_Idle_Left";
@@ -28,6 +27,7 @@ public class PlayerController : MonoBehaviour
 	const string PLAYER_WALK_LEFT = "Player_Walk_Left";
 	const string PLAYER_WALK_RIGHT = "Player_Walk_Right";
 
+	//Game mechanics
     void Attack()
     {
         
@@ -37,18 +37,19 @@ public class PlayerController : MonoBehaviour
         glasses = true;
         Debug.Log("Я недел очки");
     }
-    private void Start()
+    
+    //Animaton
+    private void ChangeAnimationState(string newState)
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
-		animator = gameObject.GetComponent<Animator>();
-    }
-    private void Update()
-    {
-		inputHorizontal = Input.GetAxisRaw("Horizontal");
-		inputVertical = Input.GetAxisRaw("Vertical");
+	    //Stop animation from interrupting itself
+	    if (currentState == newState) return;
+		
+	    //Play new animation
+	    animator.Play(newState);
 
+	    //Update currentState
+	    currentState = newState;		
     }
-
     private void HeadDirection(int route)
     {
 	    if (route == 1)
@@ -60,6 +61,18 @@ public class PlayerController : MonoBehaviour
 	    {
 		    ChangeAnimationState(PLAYER_STAND_LEFT);
 	    } 
+    }
+    //Standart
+    private void Start()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+		animator = gameObject.GetComponent<Animator>();
+    }
+    private void Update()
+    {
+		inputHorizontal = Input.GetAxisRaw("Horizontal");
+		inputVertical = Input.GetAxisRaw("Vertical");
+
     }
     private void FixedUpdate() 
     {
@@ -103,16 +116,5 @@ public class PlayerController : MonoBehaviour
 		}
     }
 
-	//Animaton state changer
-	private void ChangeAnimationState(string newState)
-	{
-		//Stop animation from interrupting itself
-		if (currentState == newState) return;
-		
-		//Play new animation
-		animator.Play(newState);
-
-		//Update currentState
-		currentState = newState;		
-	}
+	
 }
