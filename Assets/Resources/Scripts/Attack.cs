@@ -5,11 +5,9 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    //Animations
-    Animator animator;
-    string currentState;
-    
-    const string PLAYER_STAND_LEFT = "None";
+    //Animation
+    private const string CHARM = "Charm";
+    private const string WITHOUT_HINTS = "None";
     
     //Code
     public Dictionary<string, Collider2D> inTrigger;
@@ -20,7 +18,7 @@ public class Attack : MonoBehaviour
         if (other.gameObject.tag == "Pussy")
         {
             inTrigger.Add(other.name, other);
-            
+            Global.ChangeHintsState(CHARM);
             flag += 1;
         }
     }
@@ -39,6 +37,10 @@ public class Attack : MonoBehaviour
     }
     private void Update()
     {
+        if (flag == 0)
+        {
+            Global.ChangeHintsState(WITHOUT_HINTS); 
+        }
         if (flag > 0 && Input.GetButtonDown("Fire2"))
         {
             Collider2D minPussy = null;
