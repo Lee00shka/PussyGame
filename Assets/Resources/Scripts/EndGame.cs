@@ -35,6 +35,7 @@ public class EndGame : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
         Global.numOfEnchanted = 0;
+		PlayerController._glasses = false;
     }
 
     private void Start()

@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07cd5668-166a-4b3b-aa35-4d0c932153b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PussyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PussyGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Hints/Charm.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Hints/Charm.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Hints/Glasses.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Hints/Glasses.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Hints/Hints.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Hints/Hints.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Hints/None.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Hints/None.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Laser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMesh.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/EndGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/EndGame.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +11,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Attack.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/BubbleLine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/BubbleLine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/BubbleManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/CaseWithGlasses.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/EndGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Global.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Laser.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/PointForLaser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/PointForLaser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteWindow.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -102,6 +94,7 @@
       <workItem from="1656015430177" duration="1795000" />
       <workItem from="1656050075763" duration="2853000" />
       <workItem from="1656071418048" duration="1943000" />
+      <workItem from="1656110561456" duration="302000" />
     </task>
     <servers />
   </component>
