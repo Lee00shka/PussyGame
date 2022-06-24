@@ -7,6 +7,11 @@ public class CaseWithGlasses : MonoBehaviour
     private const string WITHOUT_GLASSES = "None";
     
     private bool flag = false;
+    
+    //Bubble
+    private Transform pointForBuuble;
+    private BubbleManager bubbleManager;
+    
     //Event Collider
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,16 +30,24 @@ public class CaseWithGlasses : MonoBehaviour
         }
     }
     //Standart
+    private void Start()
+    {
+        pointForBuuble = GameObject.FindGameObjectsWithTag("Player")[0].transform.GetChild(0);
+        bubbleManager = GameObject.Find("BubbleManager").GetComponent<BubbleManager>();
+    }
+
     private void Update()
     {
         if (flag && Input.GetButtonDown("Fire1"))
         {
             if (PlayerController._glasses)
             {
+                bubbleManager.CreateBubble(1, pointForBuuble.position);
                 Debug.Log("I can't change image too often");
             }
             else
             {
+                bubbleManager.CreateBubble(0, pointForBuuble.position);
                 Debug.Log("Wow, these glasses look good on me");
                 PlayerController.WearGlasses();
                 Global.PussyReactionToGlasses();

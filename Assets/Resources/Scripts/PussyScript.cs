@@ -3,8 +3,8 @@ using UnityEngine.AI;
 
 public class PussyScript : MonoBehaviour
 {
-    public Transform[] moveSpots;
-    public float waitTime;
+    [SerializeField] private Transform[] moveSpots;
+    [SerializeField] private float waitTime;
 
     //Movement
     private NavMeshAgent agent;
@@ -41,6 +41,9 @@ public class PussyScript : MonoBehaviour
     //Bubble
     private Transform pointForBuuble;
     private BubbleManager bubbleManager;
+    
+    //Sound
+    [SerializeField] private AudioSource meow;
     
     //private bool glow = bool;
     Animator animator;
@@ -167,6 +170,7 @@ public class PussyScript : MonoBehaviour
                         Global.numOfEnchanted += 1;
                         break;
                 }
+                meow.Play();
             }
         }
         else

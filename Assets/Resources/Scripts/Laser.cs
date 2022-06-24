@@ -1,11 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
     private bool flag = false;
+    [SerializeField] private GameObject prefab;
+    private Transform pointForLaser;
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,6 +23,11 @@ public class Laser : MonoBehaviour
             flag = false;
             //Написать код для удаления подсказки
         }
+    }
+
+    private void Start()
+    {
+        pointForLaser = transform.GetChild(0);
     }
 
     private void Update()

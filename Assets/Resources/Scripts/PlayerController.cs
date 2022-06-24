@@ -32,17 +32,13 @@ public class PlayerController : MonoBehaviour
 	private string currentGlasses;
 	private const string GLASSES_LEFT = "Left_Glasses";
 	private const string GLASSES_RIGHT = "Right_Glasses";
-
+	
+	
 	
 	//Game mechanics
-    void Attack()
-    {
-        
-    }
-    public static void WearGlasses()
+	public static void WearGlasses()
     {
         _glasses = true;
-        Debug.Log("They suit me");
     }
     
     //Animaton
