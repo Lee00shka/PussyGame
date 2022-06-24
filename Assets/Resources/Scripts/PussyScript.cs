@@ -3,8 +3,8 @@ using UnityEngine.AI;
 
 public class PussyScript : MonoBehaviour
 {
-    public Transform[] moveSpots;
-    public float waitTime;
+    [SerializeField] private Transform[] moveSpots;
+    [SerializeField] private float waitTime;
 
     //Movement
     private NavMeshAgent agent;
