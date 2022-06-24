@@ -39,7 +39,8 @@ public class PussyScript : MonoBehaviour
     private int direction = 1;
     
     //Bubble
-    
+    private Transform pointForBuuble;
+    private BubbleManager bubbleManager;
     
     //private bool glow = bool;
     Animator animator;
@@ -151,6 +152,7 @@ public class PussyScript : MonoBehaviour
                     case (0):
                         //ToDo: Добавить анимацию для ГГ
                         //ToDo: Вставить анимацию для киски
+                        bubbleManager.CreateBubble(5, pointForBuuble.position);
                         Debug.Log(gameObject.name + ": My heart bursts!");
                         colorHeart = 1;
                         ChangeAnimationHeart(HEART_RED);
@@ -159,6 +161,7 @@ public class PussyScript : MonoBehaviour
                     case (2):
                         //ToDo: Добавить анимацию для ГГ
                         //ToDo: Вставить анимацию для киски
+                        bubbleManager.CreateBubble(6, pointForBuuble.position);
                         Debug.Log(gameObject.name + ": Okay, but this is the last time");
                         colorHeart = 1;
                         Global.numOfEnchanted += 1;
@@ -172,6 +175,7 @@ public class PussyScript : MonoBehaviour
             {
                 if (colorHeart == 1)
                 {
+                    bubbleManager.CreateBubble(7, pointForBuuble.position);
                     Debug.Log(gameObject.name + ": Ugh, he's a total player");
                     colorHeart = 2;
                     ChangeAnimationHeart(HEART_BLUE);
@@ -179,6 +183,7 @@ public class PussyScript : MonoBehaviour
                 }
                 else
                 {
+                    bubbleManager.CreateBubble(8, pointForBuuble.position);
                     Debug.Log(gameObject.name + "YOU SHELL NOT LIVE");
                     Global.GameOver();
                 }
@@ -316,6 +321,8 @@ public class PussyScript : MonoBehaviour
         randomSpot = Random.Range(0, moveSpots.Length);
         animator = transform.GetChild(0).GetComponent<Animator>();
         NPCanimator = GetComponent<Animator>();
+        pointForBuuble = transform.GetChild(1);
+        bubbleManager = GameObject.Find("BubbleManager").GetComponent<BubbleManager>();
     }
     private void Update()
     {
