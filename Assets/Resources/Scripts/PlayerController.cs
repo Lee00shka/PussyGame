@@ -15,7 +15,8 @@ public class PlayerController : MonoBehaviour
 
 	
 	//Game property
-	public static bool glasses = false;
+	public static bool _glasses = false;
+	public bool glasses = false;
     public static bool key = false;
 
 	//Animations and states
@@ -27,6 +28,12 @@ public class PlayerController : MonoBehaviour
 	const string PLAYER_WALK_LEFT = "Player_Walk_Left";
 	const string PLAYER_WALK_RIGHT = "Player_Walk_Right";
 
+	private Animator glassesAnimator;
+	private string currentGlasses;
+	private const string GLASSES_LEFT = "Left_Glasses";
+	private const string GLASSES_RIGHT = "Right_Glasses";
+
+	
 	//Game mechanics
     void Attack()
     {
@@ -34,7 +41,7 @@ public class PlayerController : MonoBehaviour
     }
     public static void WearGlasses()
     {
-        glasses = true;
+        _glasses = true;
         Debug.Log("They suit me");
     }
     
@@ -49,6 +56,18 @@ public class PlayerController : MonoBehaviour
 
 	    //Update currentState
 	    currentState = newState;		
+    }
+    
+    private void ChangeAnimationGlasses(string newGlasses)
+    {
+	    //Stop animation from interrupting itself
+	    if (currentGlasses == newGlasses) return;
+		
+	    //Play new animation
+	    animator.Play(newGlasses);
+
+	    //Update currentState
+	    currentGlasses = newGlasses;		
     }
     private void HeadDirection(int route)
     {
@@ -72,6 +91,7 @@ public class PlayerController : MonoBehaviour
     {
 		inputHorizontal = Input.GetAxisRaw("Horizontal");
 		inputVertical = Input.GetAxisRaw("Vertical");
+		glasses = _glasses;
 
     }
     private void FixedUpdate() 
@@ -88,12 +108,20 @@ public class PlayerController : MonoBehaviour
 			if (inputHorizontal > 0)
 			{
 				ChangeAnimationState(PLAYER_WALK_RIGHT);
+				if (glasses)
+				{
+					ChangeAnimationGlasses(GLASSES_RIGHT);
+				}
 				direction = 1;
 			}
 
 			else if (inputHorizontal < 0)
 			{
 				ChangeAnimationState(PLAYER_WALK_LEFT);
+				if (glasses)
+				{
+					ChangeAnimationGlasses(GLASSES_LEFT);
+				}
 				direction = 0;
 			}
 			
@@ -102,10 +130,18 @@ public class PlayerController : MonoBehaviour
 				if (direction == 1)
 				{
 					ChangeAnimationState(PLAYER_WALK_RIGHT);
+					if (glasses)
+					{
+						ChangeAnimationGlasses(GLASSES_RIGHT);
+					}
 				}
 				else
 				{
 					ChangeAnimationState(PLAYER_WALK_LEFT);
+					if (glasses)
+					{
+						ChangeAnimationGlasses(GLASSES_LEFT);
+					}
 				}
 			}
 		}

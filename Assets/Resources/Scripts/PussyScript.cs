@@ -43,12 +43,10 @@ public class PussyScript : MonoBehaviour
     
     //Animation for hearts
     string currentState;
-    string currentHeart;
-    const string HEART_NONE = "None";
+    private string currentHeart;
     const string HEART_BLUE = "Blue_Heart";
-    const string HEART_RED = "Red_Heart";
-    const string HEART_BLACK = "Black_Heart";
-    
+    private const string HEART_RED = "Red_Heart";
+
     //Animation for NPC
     const string NPC_STAND_LEFT = "NPC_Idle_Left";
     const string NPC_STAND_RIGHT = "NPC_Idle_Right";
