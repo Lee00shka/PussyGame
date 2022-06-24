@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 	const string PLAYER_WALK_LEFT = "Player_Walk_Left";
 	const string PLAYER_WALK_RIGHT = "Player_Walk_Right";
 
-	private Animator glassesAnimator;
+	Animator glassesAnimator;
 	private string currentGlasses;
 	private const string GLASSES_LEFT = "Left_Glasses";
 	private const string GLASSES_RIGHT = "Right_Glasses";
@@ -60,11 +60,12 @@ public class PlayerController : MonoBehaviour
     
     private void ChangeAnimationGlasses(string newGlasses)
     {
+	    Debug.Log("We change glasses animation! " + currentGlasses + "," + newGlasses);
 	    //Stop animation from interrupting itself
 	    if (currentGlasses == newGlasses) return;
 		
 	    //Play new animation
-	    animator.Play(newGlasses);
+	    glassesAnimator.Play(newGlasses);
 
 	    //Update currentState
 	    currentGlasses = newGlasses;		
@@ -74,11 +75,19 @@ public class PlayerController : MonoBehaviour
 	    if (route == 1)
 	    {
 		    ChangeAnimationState(PLAYER_STAND_RIGHT);
+		    if (glasses)
+		    {
+			    ChangeAnimationGlasses(GLASSES_RIGHT);
+		    }
 	    }
 
 	    else
 	    {
 		    ChangeAnimationState(PLAYER_STAND_LEFT);
+		    if (glasses)
+		    {
+			    ChangeAnimationGlasses(GLASSES_LEFT);
+		    }
 	    } 
     }
     //Standart
@@ -86,6 +95,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
 		animator = gameObject.GetComponent<Animator>();
+		glassesAnimator = GameObject.Find("Glasses").GetComponent<Animator>();
     }
     private void Update()
     {
