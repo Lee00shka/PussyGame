@@ -8,10 +8,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
 	//Walk
- 	private float walkSpeed = 4f;
-	private float speedLimiter = 0.7f;
-	private float inputHorizontal;
-	private float inputVertical;
+	float walkSpeed = 4f;
+	float speedLimiter = 0.7f;
+	float inputHorizontal;
+	float inputVertical;
 
 	
 	//Game property
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     public static void WearGlasses()
     {
         glasses = true;
+        Debug.Log("They suit me");
     }
     
     //Animaton
