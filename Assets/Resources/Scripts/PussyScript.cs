@@ -58,7 +58,22 @@ public class PussyScript : MonoBehaviour
     //Changing private properties
     public void Mark ()
     {
-        blackLabel = true;
+        if (colorHeart == 1)
+        {
+            Global.ChangeStatus(0);
+            if (tagGlasses == PlayerController.glasses)
+            {
+                Debug.Log(gameObject.name + ": We've already met");
+            }
+            else
+            {
+                Debug.Log(gameObject.name + ": I already with another");
+            }
+        }
+        else
+        {
+            blackLabel = true;
+        }
     }
     public void ChangeStatus(int val)
     {
@@ -80,7 +95,6 @@ public class PussyScript : MonoBehaviour
 
         if ((point - agent.transform.position).magnitude < 0.9f)
         {
-            Debug.Log("WTF");
             if (waitTime <= 0)
             {
                 randomSpot = Random.Range(0, moveSpots.Length);
@@ -105,7 +119,7 @@ public class PussyScript : MonoBehaviour
                 }
                 else
                 {
-                    //Добавить анимацию игры с лазером
+                    //ToDo: Добавить анимацию игры с лазером
                     waitTime -= Time.deltaTime;
                 }
             }
@@ -121,11 +135,7 @@ public class PussyScript : MonoBehaviour
     } 
     private void RoamInRoom()
     {
-        if (Room.box.bounds.Contains(transform.position))
-        {
-            //Не дописанная механика
-            print("I'm in the room");
-        }
+        //ToDo: Написать механику
     }
     private void Attacked()
     {
@@ -137,22 +147,16 @@ public class PussyScript : MonoBehaviour
                 switch (colorHeart)
                 {
                     case (0):
+                        //ToDo: Добавить анимацию для ГГ
+                        //ToDo: Вставить анимацию для киски
                         Debug.Log(gameObject.name + ": My heart bursts!");
                         colorHeart = 1;
                         ChangeAnimationHeart(HEART_RED);
                         Global.numOfEnchanted += 1;
                         break;
-                    case (1):
-                        if (tagGlasses == PlayerController.glasses)
-                        {
-                            Debug.Log(gameObject.name + ": We've already met");
-                        }
-                        else
-                        {
-                            Debug.Log(gameObject.name + ": I already with another");
-                        }
-                        break;
                     case (2):
+                        //ToDo: Добавить анимацию для ГГ
+                        //ToDo: Вставить анимацию для киски
                         Debug.Log(gameObject.name + ": Okay, but this is the last time");
                         colorHeart = 1;
                         Global.numOfEnchanted += 1;
@@ -178,6 +182,7 @@ public class PussyScript : MonoBehaviour
                 }
             }
         }
+        Global.WinGame();
         blackLabel = false;
         status = 0;
     }

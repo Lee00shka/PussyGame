@@ -17,7 +17,18 @@ public class Global : MonoBehaviour
     {
         
     }
-    
+
+    public static void WinGame()
+    {
+        if (numOfPussies == numOfEnchanted)
+        {
+            
+        }
+    }
+    public static void SpawnBubbleLine()
+    {
+        
+    }
     //Changing every pussy
     public static void ChangeStatus(int val)
     {

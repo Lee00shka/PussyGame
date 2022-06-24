@@ -32,10 +32,10 @@ public class PlayerController : MonoBehaviour
     {
         
     }
-    public static void UseMirror()
+    public static void WearGlasses()
     {
         glasses = true;
-        Debug.Log("Я недел очки");
+        Debug.Log("They suit me");
     }
     
     //Animaton
