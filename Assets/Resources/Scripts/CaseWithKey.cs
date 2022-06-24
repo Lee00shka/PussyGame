@@ -33,6 +33,7 @@ public class CaseWithKey : MonoBehaviour
             {
                 Debug.Log("Wow, these glasses look good on me");
                 PlayerController.glasses = true;
+                Global.PussyReactionToGlasses();
             }
         }
     }
