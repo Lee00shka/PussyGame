@@ -29,6 +29,10 @@ public class Attack : MonoBehaviour
         {
             inTrigger.Remove(other.name);
             flag -= 1;
+            if (flag == 0)
+            {
+                Global.ChangeHintsState(WITHOUT_HINTS); 
+            }
         }
     }
     private void Start()
@@ -37,10 +41,6 @@ public class Attack : MonoBehaviour
     }
     private void Update()
     {
-        if (flag == 0)
-        {
-            Global.ChangeHintsState(WITHOUT_HINTS); 
-        }
         if (flag > 0 && Input.GetButtonDown("Fire2"))
         {
             Collider2D minPussy = null;

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Global : MonoBehaviour
@@ -29,6 +26,14 @@ public class Global : MonoBehaviour
         currentHint = newHint;
     }
 
+    public static void PussyReactionToGlasses()
+    {
+        foreach (var pussy in NPC)
+        {
+            pussy.GetComponent<PussyScript>().PlayerPutOnGlasses();
+        }
+    }
+    
     private void Start()
     {
         hintAnimator = GameObject.FindGameObjectsWithTag("UI Hints")[0].GetComponent<Animator>();

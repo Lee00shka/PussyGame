@@ -64,6 +64,13 @@ public class PussyScript : MonoBehaviour
     {
         status = val;
     }
+    public void PlayerPutOnGlasses()
+    {
+        if (colorHeart == 2)
+        {
+            colorHeart = 0;
+        }
+    }
     
     //Game mechanics
     private void Patrolling()
