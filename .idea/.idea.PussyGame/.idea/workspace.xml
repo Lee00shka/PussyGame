@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="07cd5668-166a-4b3b-aa35-4d0c932153b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PussyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PussyGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/Gamepixies SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Fonts/Gamepixies SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Attack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Attack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/CaseWithKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/CaseWithKey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/PussyScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/PussyScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

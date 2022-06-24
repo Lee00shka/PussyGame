@@ -5,25 +5,25 @@ public class PussyScript : MonoBehaviour
 {
     public Transform[] moveSpots;
     public float waitTime;
-    
+
+    //Movement
     private NavMeshAgent agent;
     private int randomSpot;
     private Vector3 point;
     private Transform laserPoint;
-    private int colorHeart = 0;
-    
+
+    //Vision
     private float startWaitTime = 3;
     private float laserTime = 10;
     private int rays = 90;
     private int distance = 20;
     private float angle = 360;
     
+    //Charm
     private int status = 0;
     private bool blackLabel = false;
-
-    private int direction = 1;
-    //private bool glow = bool;
-    
+    private int colorHeart = 0;
+    private bool tagGlasses = false;
     /* Color Heart:
      * 0 - Нейтральный
      * 1 - Очарованный
@@ -35,9 +35,12 @@ public class PussyScript : MonoBehaviour
      * 2 - Заперт в комнате
      * 3 - Очарован*/
     
+    //Animation
+    private int direction = 1;
+    //private bool glow = bool;
     Animator animator;
-
     private Animator NPCanimator;
+    
     //Animation for hearts
     string currentState;
     string currentHeart;
@@ -52,6 +55,7 @@ public class PussyScript : MonoBehaviour
     const string NPC_WALK_LEFT = "NPC_Walk_Left";
     const string NPC_WALK_RIGHT = "NPC_Walk_Right";
 
+    //Changing private properties
     public void Mark ()
     {
         blackLabel = true;
@@ -60,13 +64,16 @@ public class PussyScript : MonoBehaviour
     {
         status = val;
     }
+    
+    //Game mechanics
     private void Patrolling()
     {
         point = moveSpots[randomSpot].position;
         agent.SetDestination(point);
 
-        if ((point - agent.transform.position).magnitude < 0.3f)
+        if ((point - agent.transform.position).magnitude < 0.9f)
         {
+            Debug.Log("WTF");
             if (waitTime <= 0)
             {
                 randomSpot = Random.Range(0, moveSpots.Length);
@@ -113,6 +120,57 @@ public class PussyScript : MonoBehaviour
             print("I'm in the room");
         }
     }
+    private void Attacked()
+    {
+        if (blackLabel)
+        {
+            switch (colorHeart)
+            {
+                case (0):
+                    Debug.Log(gameObject.name + ": My heart bursts!");
+                    colorHeart = 1;
+                    ChangeAnimationHeart(HEART_RED);
+                    break;
+                case (1):
+                    if (tagGlasses == PlayerController.glasses)
+                    {
+                        Debug.Log(gameObject.name + ": We've already met");
+                    }
+                    else
+                    {
+                        Debug.Log(gameObject.name + ": I already with another");
+                    }
+                    break;
+                case (2):
+                    Debug.Log(gameObject.name + ": Okay, but this is the last time");
+                    colorHeart = 1;
+                    break;
+            }
+        }
+        else
+        {
+            Transform player = GameObject.FindGameObjectsWithTag("Player")[0].transform;
+            if (colorHeart != 0 && RayToScan(player))
+            {
+                if (colorHeart == 1)
+                {
+                    Debug.Log(gameObject.name + ": Ugh, he's a total player");
+                    colorHeart = 2;
+                    ChangeAnimationHeart(HEART_BLUE);
+                }
+                else
+                {
+                    Debug.Log(gameObject.name + "YOU SHELL NOT LIVE");
+                    Global.EndGame();
+                }
+            }
+        }
+
+        blackLabel = false;
+        status = 0;
+    }
+    
+    //Support 
     private bool GetRaycast(Vector3 dir, Transform target)
     {
         bool result = false;
@@ -165,48 +223,8 @@ public class PussyScript : MonoBehaviour
         if (a || b) result = true;
         return result;
     }
-    private void Attacked()
-    {
-        if (blackLabel)
-        {
-            switch (colorHeart)
-            {
-                case (0):
-                    Debug.Log(gameObject.name + ": My heart bursts!");
-                    colorHeart = 1;
-                    ChangeAnimationHeart(HEART_RED);
-                    break;
-                case (1):
-                    Debug.Log(gameObject.name + ": We've already met");
-                    break;
-                case (2):
-                    Debug.Log(gameObject.name + ": Okay, but this is the last time");
-                    colorHeart = 1;
-                    break;
-            }
-        }
-        else
-        {
-            Transform player = GameObject.FindGameObjectsWithTag("Player")[0].transform;
-            if (colorHeart != 0 && RayToScan(player))
-            {
-                if (colorHeart == 1)
-                {
-                    Debug.Log(gameObject.name + ": Ugh, he's a total player");
-                    colorHeart = 2;
-                    ChangeAnimationHeart(HEART_BLUE);
-                }
-                else
-                {
-                    Debug.Log(gameObject.name + "YOU SHELL NOT LIVE");
-                    Global.EndGame();
-                }
-            }
-        }
-
-        blackLabel = false;
-        status = 0;
-    }
+    
+    //Animation
     private void ChangeAnimationHeart(string newHeart)
     {
         //Stop animation from interrupting itself
@@ -267,6 +285,8 @@ public class PussyScript : MonoBehaviour
             }
         }
     }
+    
+    //Standart 
     private void Start()
     {
         laserPoint = GameObject.FindGameObjectsWithTag("Laser")[0].transform;
