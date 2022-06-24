@@ -3,8 +3,8 @@ using UnityEngine;
 public class Global : MonoBehaviour
 {
     private static GameObject[] NPC;
-    public static int numOfPussies;
-    public static int numOfEnchanted = 0;
+    //public static int numOfPussies;
+    //public static int numOfEnchanted = 0;
     
     private static Animator hintAnimator;
     private static string currentHint;
@@ -46,7 +46,7 @@ public class Global : MonoBehaviour
     {
         hintAnimator = GameObject.FindGameObjectsWithTag("UI Hints")[0].GetComponent<Animator>();
         NPC = GameObject.FindGameObjectsWithTag("Pussy");
-        numOfPussies = NPC.Length;
+        ScoreManager.numOfPussies = NPC.Length;
     }
 }
 

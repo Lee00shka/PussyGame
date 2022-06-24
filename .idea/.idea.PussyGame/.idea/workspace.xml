@@ -3,36 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="07cd5668-166a-4b3b-aa35-4d0c932153b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PussyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PussyGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GingerCat/NPC_Idle_Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/NPC/GingerCat/NPC_Idle_Left.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GingerCat/NPC_Idle_Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/NPC/GingerCat/NPC_Idle_Right.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GingerCat/NPC_Walk_Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/NPC/GingerCat/NPC_Walk_Left.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GingerCat/NPC_Walk_Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/NPC/GingerCat/NPC_Walk_Right.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GingerCat/Pussy_1.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GingerCat/Pussy_1.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GrayCat/NPC_Idle_Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/NPC/GrayCat/NPC_Idle_Left.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GrayCat/NPC_Idle_Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/NPC/GrayCat/NPC_Idle_Right.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GrayCat/NPC_Walk_Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/NPC/GrayCat/NPC_Walk_Left.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GrayCat/NPC_Walk_Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/NPC/GrayCat/NPC_Walk_Right.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GrayCat/Pussy_1.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GrayCat/Pussy_1.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GrayCat/Pussy_2.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/GrayCat/Pussy_2.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/NPC_Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/NPC_Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/NPC_Walk_Down.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/NPC_Walk_Down.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/NPC_Walk_Left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/NPC_Walk_Left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/NPC_Walk_Right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/NPC_Walk_Right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/NPC_Walk_Up.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/NPC_Walk_Up.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/Pussy_1 1.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/Pussy_1 1.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/Pussy_1 2.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/Pussy_1 2.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/Pussy_1.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NPC/Pussy_1.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/Gamepixies SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Fonts/Gamepixies SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Global.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/PussyScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/PussyScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +19,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Global.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Laser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Room.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ScoreManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -115,6 +91,7 @@
       <workItem from="1656005845439" duration="3753000" />
       <workItem from="1656015430177" duration="1795000" />
       <workItem from="1656050075763" duration="2853000" />
+      <workItem from="1656071418048" duration="1611000" />
     </task>
     <servers />
   </component>
