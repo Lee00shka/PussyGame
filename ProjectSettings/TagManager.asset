@@ -52,9 +52,9 @@ TagManager:
   - name: Enviroment
     uniqueID: 3562993681
     locked: 0
-  - name: Palayer
-    uniqueID: 3477094019
-    locked: 0
   - name: Enemy
     uniqueID: 1026699453
+    locked: 0
+  - name: Clothes
+    uniqueID: 3477094019
     locked: 0
