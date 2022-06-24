@@ -6,13 +6,16 @@ public class Laser : MonoBehaviour
     [SerializeField] private GameObject prefab;
     private Transform pointForLaser;
     
+    private const string DISCO = "Disco";
+    private const string WITHOUT_DISCO = "None";
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             flag = true;
-            //Написать код для добавления подказки
+            Global.ChangeHintsState(DISCO);
         }
     }
 
@@ -21,7 +24,7 @@ public class Laser : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             flag = false;
-            //Написать код для удаления подсказки
+            Global.ChangeHintsState(WITHOUT_DISCO);
         }
     }
 
