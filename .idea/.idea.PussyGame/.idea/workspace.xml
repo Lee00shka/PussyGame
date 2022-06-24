@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07cd5668-166a-4b3b-aa35-4d0c932153b3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PussyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PussyGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/PNG/Enviroment/Tilemaps/MyTestTilemap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PNG/Enviroment/Tilemaps/MyTestTilemap.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/Bubble_8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/BubbleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/BubbleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/CaseWithGlasses.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/CaseWithGlasses.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/EndGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/EndGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Laser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/PussyScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/PussyScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/SoundManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/SoundManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMesh.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +35,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/EndGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Global.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Laser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/PointForLaser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteWindow.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

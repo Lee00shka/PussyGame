@@ -30,15 +30,11 @@ public class EndGame : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    public void Restart()
-    {
-        
-    }
-
     public void Home(int sceneID)
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
+        Global.numOfEnchanted = 0;
     }
 
     private void Start()

@@ -4,8 +4,8 @@ public class BubbleManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] prefabs;
 
-    public void CreateBubble(int prefabID, Vector2 position)
+    public void CreateBubble(int prefabID, Transform obj)
     {
-        Instantiate(prefabs[prefabID], position, Quaternion.identity);
+        Instantiate(prefabs[prefabID], obj.position, Quaternion.identity, obj);
     }
 }

@@ -34,6 +34,7 @@ public class Laser : MonoBehaviour
     {
         if (flag && Input.GetButtonDown("Fire1"))
         {
+            Instantiate(prefab, pointForLaser.position, Quaternion.identity, pointForLaser);
             Debug.Log("The laser is activated");
             Global.ChangeStatus(1);
         }

@@ -42,12 +42,12 @@ public class CaseWithGlasses : MonoBehaviour
         {
             if (PlayerController._glasses)
             {
-                bubbleManager.CreateBubble(1, pointForBuuble.position);
+                bubbleManager.CreateBubble(1, pointForBuuble);
                 Debug.Log("I can't change image too often");
             }
             else
             {
-                bubbleManager.CreateBubble(0, pointForBuuble.position);
+                bubbleManager.CreateBubble(0, pointForBuuble);
                 Debug.Log("Wow, these glasses look good on me");
                 PlayerController.WearGlasses();
                 Global.PussyReactionToGlasses();

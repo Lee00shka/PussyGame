@@ -54,6 +54,8 @@ public class PussyScript : MonoBehaviour
     private string currentHeart;
     const string HEART_BLUE = "Blue_Heart";
     private const string HEART_RED = "Red_Heart";
+    private const string HEART_NONE = "None";
+    private const string HEART_BLACK = "Black_Heart";
 
     //Animation for NPC
     const string NPC_STAND_LEFT = "NPC_Idle_Left";
@@ -69,10 +71,12 @@ public class PussyScript : MonoBehaviour
             Global.ChangeStatus(0);
             if (tagGlasses == PlayerController._glasses)
             {
+                bubbleManager.CreateBubble(4, pointForBuuble);
                 Debug.Log(gameObject.name + ": We've already met");
             }
             else
             {
+                bubbleManager.CreateBubble(3, pointForBuuble);
                 Debug.Log(gameObject.name + ": I already with another");
             }
         }
@@ -90,6 +94,12 @@ public class PussyScript : MonoBehaviour
         if (colorHeart == 2)
         {
             colorHeart = 0;
+            ChangeAnimationHeart(HEART_NONE);
+        }
+
+        if (colorHeart == 1)
+        {
+            ChangeAnimationHeart(HEART_BLACK);
         }
     }
     
@@ -155,31 +165,31 @@ public class PussyScript : MonoBehaviour
                     case (0):
                         //ToDo: Добавить анимацию для ГГ
                         //ToDo: Вставить анимацию для киски
-                        bubbleManager.CreateBubble(5, pointForBuuble.position);
+                        bubbleManager.CreateBubble(5, pointForBuuble);
                         Debug.Log(gameObject.name + ": My heart bursts!");
                         colorHeart = 1;
-                        ChangeAnimationHeart(HEART_RED);
-                        Global.numOfEnchanted += 1;
                         break;
                     case (2):
                         //ToDo: Добавить анимацию для ГГ
                         //ToDo: Вставить анимацию для киски
-                        bubbleManager.CreateBubble(6, pointForBuuble.position);
+                        bubbleManager.CreateBubble(6, pointForBuuble);
                         Debug.Log(gameObject.name + ": Okay, but this is the last time");
                         colorHeart = 1;
-                        Global.numOfEnchanted += 1;
                         break;
                 }
+                ChangeAnimationHeart(HEART_RED);
+                Global.numOfEnchanted += 1;
+                tagGlasses = PlayerController._glasses;
                 meow.Play();
             }
         }
         else
         {
-            if (colorHeart != 0 && RayToScan(player))
+            if (colorHeart != 0 && RayToScan(player) && tagGlasses == PlayerController._glasses)
             {
                 if (colorHeart == 1)
                 {
-                    bubbleManager.CreateBubble(7, pointForBuuble.position);
+                    bubbleManager.CreateBubble(7, pointForBuuble);
                     Debug.Log(gameObject.name + ": Ugh, he's a total player");
                     colorHeart = 2;
                     ChangeAnimationHeart(HEART_BLUE);
@@ -187,7 +197,7 @@ public class PussyScript : MonoBehaviour
                 }
                 else
                 {
-                    bubbleManager.CreateBubble(8, pointForBuuble.position);
+                    bubbleManager.CreateBubble(8, pointForBuuble);
                     Debug.Log(gameObject.name + "YOU SHELL NOT LIVE");
                     Global.GameOver();
                 }
