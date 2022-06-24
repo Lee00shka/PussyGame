@@ -37,6 +37,10 @@ public class PussyScript : MonoBehaviour
     
     //Animation
     private int direction = 1;
+    
+    //Bubble
+    
+    
     //private bool glow = bool;
     Animator animator;
     private Animator NPCanimator;
