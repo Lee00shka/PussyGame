@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 public class EndGame : MonoBehaviour
 {
     public TextMeshProUGUI _resultOfGame;
-    public static TextMeshProUGUI resultOfGame;
+    private static TextMeshProUGUI resultOfGame;
     
-    [SerializeField] GameObject endScreen;
-
+    [SerializeField] GameObject _endScreen;
+    private static GameObject endScreen;
     public static void RenderText(string result)
     {
         if (result == "Win")
@@ -44,5 +44,6 @@ public class EndGame : MonoBehaviour
     private void Start()
     {
         resultOfGame = _resultOfGame;
+        endScreen = _endScreen;
     }
 }
