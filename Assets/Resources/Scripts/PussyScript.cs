@@ -178,7 +178,7 @@ public class PussyScript : MonoBehaviour
                 else
                 {
                     Debug.Log(gameObject.name + "YOU SHELL NOT LIVE");
-                    Global.EndGame();
+                    Global.GameOver();
                 }
             }
         }

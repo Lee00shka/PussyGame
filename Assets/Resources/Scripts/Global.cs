@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Global : MonoBehaviour
 {
@@ -11,18 +12,19 @@ public class Global : MonoBehaviour
     private static Animator hintAnimator;
     private static string currentHint;
     public TextMeshProUGUI charmed;
-    
+
     //Global ivents
-    public static void EndGame()
+    public static void GameOver()
     {
-        
+        EndGame.End("Lose");
     }
 
     public static void WinGame()
     {
         if (numOfPussies == numOfEnchanted)
         {
-            
+            Debug.Log("We enchanted!");
+            EndGame.End("Win");
         }
     }
     public static void SpawnBubbleLine()
