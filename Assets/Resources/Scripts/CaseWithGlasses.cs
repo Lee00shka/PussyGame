@@ -38,7 +38,7 @@ public class CaseWithGlasses : MonoBehaviour
 
     private void Update()
     {
-        if (flag && Input.GetKeyDown(KeyCode.E))
+        if (flag && Input.GetButtonDown("Fire1"))
         {
             if (PlayerController._glasses)
             {
