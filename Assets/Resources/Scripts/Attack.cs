@@ -37,7 +37,7 @@ public class Attack : MonoBehaviour
     //Mechanic
     private void Charm()
     {
-        if (flag > 0 && Input.GetButtonDown("Fire2"))
+        if (flag > 0 && Input.GetKeyDown(KeyCode.Space))
         {
             Collider2D minPussy = null;
             float min = 1000000;

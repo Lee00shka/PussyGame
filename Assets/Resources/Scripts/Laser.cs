@@ -35,7 +35,7 @@ public class Laser : MonoBehaviour
 
     private void Update()
     {
-        if (flag && Input.GetButtonDown("Fire1"))
+        if (flag && Input.GetKeyDown(KeyCode.E))
         {
             Instantiate(prefab, pointForLaser.position, Quaternion.identity, pointForLaser);
             Debug.Log("The laser is activated");
