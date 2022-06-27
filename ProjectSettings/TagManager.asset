@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - point
+  - Pussy
+  - Laser
+  - UI Hints
   layers:
   - Default
   - TransparentFX
@@ -53,4 +56,7 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 1026699453
+    locked: 0
+  - name: Clothes
+    uniqueID: 641634605
     locked: 0
