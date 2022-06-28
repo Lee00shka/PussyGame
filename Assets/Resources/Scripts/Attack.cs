@@ -37,23 +37,26 @@ public class Attack : MonoBehaviour
     //Mechanic
     private void Charm()
     {
-        if (flag > 0 && Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            Collider2D minPussy = null;
-            float min = 1000000;
-            float count;
-            foreach (var pussy in inTrigger)
+            if (flag > 0)
             {
-                count = Vector2.Distance(pussy.Value.transform.position, transform.position );
-                if (count < min)
+                Collider2D minPussy = null;
+                float min = 1000000;
+                float count;
+                foreach (var pussy in inTrigger)
                 {
-                    min = count;
-                    minPussy = pussy.Value;
+                    count = Vector2.Distance(pussy.Value.transform.position, transform.position );
+                    if (count < min)
+                    {
+                        min = count;
+                        minPussy = pussy.Value;
+                    }
                 }
-            }
-            Global.ChangeStatus(3);
-            minPussy.gameObject.GetComponent<PussyScript>().Mark();
-            Debug.Log("Have fun, " + minPussy.gameObject.name);
+                Global.ChangeStatus(3);
+                minPussy.gameObject.GetComponent<PussyScript>().Mark();
+                Debug.Log("Have fun, " + minPussy.gameObject.name);
+            } 
         }
     }
     

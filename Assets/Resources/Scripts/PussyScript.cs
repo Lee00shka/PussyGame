@@ -127,7 +127,7 @@ public class PussyScript : MonoBehaviour
         if (RayToScan(laserPoint))
         {
             agent.SetDestination(laserPoint.position);
-            if ((laserPoint.position - agent.transform.position).magnitude < 0.3f)
+            if ((laserPoint.position - agent.transform.position).magnitude < 0.8f)
             {
                 if (waitTime <= 0)
                 {
