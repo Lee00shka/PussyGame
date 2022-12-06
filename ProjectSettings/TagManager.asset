@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - point
+  - Pussy
+  - Laser
+  - UI Hints
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 1333042621
+    locked: 0
+  - name: Enviroment
+    uniqueID: 3562993681
+    locked: 0
+  - name: Palayer
+    uniqueID: 3477094019
+    locked: 0
+  - name: Enemy
+    uniqueID: 1026699453
+    locked: 0
+  - name: Clothes
+    uniqueID: 641634605
+    locked: 0
